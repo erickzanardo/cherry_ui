@@ -1,6 +1,7 @@
 import 'dart:collection';
 
 import 'package:accessibility_tools/accessibility_tools.dart';
+import 'package:cherry_ui/cherry_ui.dart';
 import 'package:widgetbook/widgetbook.dart';
 
 final addons = UnmodifiableListView<WidgetbookAddon>([
@@ -14,14 +15,14 @@ final addons = UnmodifiableListView<WidgetbookAddon>([
       child: child,
     ),
   ),
-  //MaterialThemeAddon(
-  //  themes: [
-  //    WidgetbookTheme(
-  //      name: 'GameTheme',
-  //      data: const GameTheme().themeData,
-  //    ),
-  //  ],
-  //),
+  MaterialThemeAddon(
+    themes: [
+      WidgetbookTheme(
+        name: 'GameTheme',
+        data: const CherryUITheme().themeData,
+      ),
+    ],
+  ),
   ViewportAddon([
     IosViewports.iPhone13,
     AndroidViewports.samsungGalaxyNote20,

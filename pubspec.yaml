@@ -16,3 +16,9 @@ dev_dependencies:
     sdk: flutter
   mocktail: ^1.0.4
   very_good_analysis: ^9.0.0
+
+flutter:
+    fonts:
+    - family: Cherry BombOne
+      fonts:
+        - asset: fonts/Cherry_Bomb_One/CherryBombOne-Regular.ttf
