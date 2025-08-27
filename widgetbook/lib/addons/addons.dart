@@ -15,6 +15,13 @@ final addons = UnmodifiableListView<WidgetbookAddon>([
       child: child,
     ),
   ),
+  ViewportAddon([
+    IosViewports.iPhone13,
+    AndroidViewports.samsungGalaxyNote20,
+    MacosViewports.macbookPro,
+    WindowsViewports.desktop,
+    LinuxViewports.desktop,
+  ]),
   MaterialThemeAddon(
     themes: [
       WidgetbookTheme(
@@ -23,12 +30,5 @@ final addons = UnmodifiableListView<WidgetbookAddon>([
       ),
     ],
   ),
-  ViewportAddon([
-    IosViewports.iPhone13,
-    AndroidViewports.samsungGalaxyNote20,
-    MacosViewports.macbookPro,
-    WindowsViewports.desktop,
-    LinuxViewports.desktop,
-  ]),
   TextScaleAddon(divisions: 3, initialScale: 1),
 ]);
