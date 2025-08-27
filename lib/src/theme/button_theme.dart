@@ -18,16 +18,18 @@ enum CherryButtonType {
   neutral,
 }
 
-/// {@template cherry_button_theme}
-/// A theme for the Cherry Button design system.
+/// {@template cherry_base_button_theme}
+/// A base theme for the Cherry Button design system.
 /// {@endtemplate}
-class CherryButtonTheme extends ThemeExtension<CherryButtonTheme> {
+class CherryBaseButtonTheme extends ThemeExtension<CherryBaseButtonTheme> {
   /// {@macro cherry_button_theme}
-  const CherryButtonTheme({
+  const CherryBaseButtonTheme({
     required this.affirmativeColor,
     required this.negativeColor,
     required this.informativeColor,
     required this.neutralColor,
+    required this.pressedScale,
+    required this.animationDuration,
   });
 
   /// Color for buttons with affirmative actions (e.g., "Yes", "Submit").
@@ -41,6 +43,12 @@ class CherryButtonTheme extends ThemeExtension<CherryButtonTheme> {
 
   /// Color for buttons with neutral actions (e.g., "Maybe", "Later").
   final Color neutralColor;
+
+  /// Scale factor when the button is pressed
+  final double pressedScale;
+
+  /// Duration of the press animation
+  final Duration animationDuration;
 
   /// Gets the color associated with the given [CherryButtonType].
   Color colorForType(CherryButtonType type) {
@@ -57,29 +65,33 @@ class CherryButtonTheme extends ThemeExtension<CherryButtonTheme> {
   }
 
   @override
-  ThemeExtension<CherryButtonTheme> copyWith({
+  ThemeExtension<CherryBaseButtonTheme> copyWith({
     Color? affirmativeColor,
     Color? negativeColor,
     Color? informativeColor,
     Color? neutralColor,
+    double? pressedScale,
+    Duration? animationDuration,
   }) {
-    return CherryButtonTheme(
+    return CherryBaseButtonTheme(
       affirmativeColor: affirmativeColor ?? this.affirmativeColor,
       negativeColor: negativeColor ?? this.negativeColor,
       informativeColor: informativeColor ?? this.informativeColor,
       neutralColor: neutralColor ?? this.neutralColor,
+      pressedScale: pressedScale ?? this.pressedScale,
+      animationDuration: animationDuration ?? this.animationDuration,
     );
   }
 
   @override
-  ThemeExtension<CherryButtonTheme> lerp(
-    covariant ThemeExtension<CherryButtonTheme>? other,
+  ThemeExtension<CherryBaseButtonTheme> lerp(
+    covariant ThemeExtension<CherryBaseButtonTheme>? other,
     double t,
   ) {
-    if (other is! CherryButtonTheme) {
+    if (other is! CherryBaseButtonTheme) {
       return this;
     }
-    return CherryButtonTheme(
+    return CherryBaseButtonTheme(
       affirmativeColor: Color.lerp(
         affirmativeColor,
         other.affirmativeColor,
@@ -100,6 +112,88 @@ class CherryButtonTheme extends ThemeExtension<CherryButtonTheme> {
         other.neutralColor,
         t,
       )!,
+      pressedScale: lerpDouble(
+        pressedScale,
+        other.pressedScale,
+        t,
+      )!,
+      animationDuration: lerpDuration(
+        animationDuration,
+        other.animationDuration,
+        t,
+      ),
+    );
+  }
+}
+
+/// {@template cherry_button_theme}
+/// A theme for the Cherry Button design system.
+/// {@endtemplate}
+class CherryButtonTheme extends ThemeExtension<CherryButtonTheme> {
+  /// {@macro cherry_button_theme}
+  const CherryButtonTheme({
+    required this.padding,
+    required this.borderRadius,
+    required this.borderSize,
+    required this.blurRadius,
+  });
+
+  /// Padding inside the button
+  final double padding;
+
+  /// Border radius of the button
+  final double borderRadius;
+
+  /// Border size of the button
+  final double borderSize;
+
+  /// Blur radius of the button shadow
+  final double blurRadius;
+
+  @override
+  ThemeExtension<CherryButtonTheme> copyWith({
+    double? padding,
+    double? borderRadius,
+    double? borderSize,
+    double? blurRadius,
+  }) {
+    return CherryButtonTheme(
+      padding: padding ?? this.padding,
+      borderRadius: borderRadius ?? this.borderRadius,
+      borderSize: borderSize ?? this.borderSize,
+      blurRadius: blurRadius ?? this.blurRadius,
+    );
+  }
+
+  @override
+  ThemeExtension<CherryButtonTheme> lerp(
+    covariant ThemeExtension<CherryButtonTheme>? other,
+    double t,
+  ) {
+    if (other is! CherryButtonTheme) {
+      return this;
+    }
+    return CherryButtonTheme(
+      padding: lerpDouble(
+        padding,
+        other.padding,
+        t,
+      )!,
+      borderRadius: lerpDouble(
+        borderRadius,
+        other.borderRadius,
+        t,
+      )!,
+      borderSize: lerpDouble(
+        borderSize,
+        other.borderSize,
+        t,
+      )!,
+      blurRadius: lerpDouble(
+        blurRadius,
+        other.blurRadius,
+        t,
+      )!,
     );
   }
 }
@@ -111,18 +205,10 @@ class CherryCircleButtonTheme extends ThemeExtension<CherryCircleButtonTheme> {
   /// {@macro cherry_circle_button_theme}
   const CherryCircleButtonTheme({
     required this.size,
-    required this.pressedScale,
-    required this.animationDuration,
   });
 
   /// Size of the circle button
   final double size;
-
-  /// Scale factor when the button is pressed
-  final double pressedScale;
-
-  /// Duration of the press animation
-  final Duration animationDuration;
 
   @override
   ThemeExtension<CherryCircleButtonTheme> copyWith({
@@ -132,8 +218,6 @@ class CherryCircleButtonTheme extends ThemeExtension<CherryCircleButtonTheme> {
   }) {
     return CherryCircleButtonTheme(
       size: size ?? this.size,
-      pressedScale: pressedScale ?? this.pressedScale,
-      animationDuration: animationDuration ?? this.animationDuration,
     );
   }
 
@@ -151,16 +235,6 @@ class CherryCircleButtonTheme extends ThemeExtension<CherryCircleButtonTheme> {
         other.size,
         t,
       )!,
-      pressedScale: lerpDouble(
-        pressedScale,
-        other.pressedScale,
-        t,
-      )!,
-      animationDuration: lerpDuration(
-        animationDuration,
-        other.animationDuration,
-        t,
-      ),
     );
   }
 }

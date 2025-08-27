@@ -41,7 +41,7 @@ class _CherryCircleButtonState extends State<CherryCircleButton> {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
-    final buttonTheme = theme.cherryExtension<CherryButtonTheme>();
+    final baseButtonTheme = theme.cherryExtension<CherryBaseButtonTheme>();
     final circleButtonTheme = theme.cherryExtension<CherryCircleButtonTheme>();
 
     return GestureDetector(
@@ -59,10 +59,10 @@ class _CherryCircleButtonState extends State<CherryCircleButton> {
         widget.onPressUp?.call();
       },
       child: AnimatedScale(
-        duration: circleButtonTheme.animationDuration,
-        scale: _pressed ? circleButtonTheme.pressedScale : 1.0,
+        duration: baseButtonTheme.animationDuration,
+        scale: _pressed ? baseButtonTheme.pressedScale : 1.0,
         child: CherryDecoratedCircle(
-          color: buttonTheme.colorForType(widget.type),
+          color: baseButtonTheme.colorForType(widget.type),
           size: circleButtonTheme.size,
           child: widget.child,
         ),
