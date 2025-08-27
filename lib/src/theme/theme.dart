@@ -1,4 +1,7 @@
+import 'package:cherry_ui/src/cherry_ui.dart';
 import 'package:flutter/material.dart';
+
+export 'button_theme.dart';
 
 /// A class with all design tokens for the Cherry UI design.
 class CherryUITokens {
@@ -14,11 +17,34 @@ class CherryUITokens {
 /// {@endtemplate}
 class CherryUITheme {
   /// {@macro cherry_ui_theme}
-  const CherryUITheme();
+  const CherryUITheme({
+    this.scaffoldBackgroundColor = const Color(0xfff5ccc6),
+    this.buttonTheme = const CherryButtonTheme(
+      affirmativeColor: Color(0xFF87e629),
+      negativeColor: Color(0xFFe62929),
+      informativeColor: Color(0xFF29aae6),
+      neutralColor: Color(0xFFbbdded),
+    ),
+    this.circleButtonTheme = const CherryCircleButtonTheme(
+      size: 45,
+      pressedScale: 0.9,
+      animationDuration: Duration(milliseconds: 45),
+    ),
+  });
+
+  /// The background color of the scaffold.
+  final Color scaffoldBackgroundColor;
+
+  /// Theme for buttons.
+  final CherryButtonTheme buttonTheme;
+
+  /// Theme for circle buttons.
+  final CherryCircleButtonTheme circleButtonTheme;
 
   /// Returns the material theme data.
   ThemeData get themeData {
     return ThemeData(
+      scaffoldBackgroundColor: scaffoldBackgroundColor,
       textTheme: const TextTheme(
         displayLarge: TextStyle(
           fontFamily: CherryUITokens.fontFamily,
@@ -75,6 +101,10 @@ class CherryUITheme {
           package: CherryUITokens.package,
         ),
       ),
+      extensions: [
+        buttonTheme,
+        circleButtonTheme,
+      ],
     );
   }
 }
