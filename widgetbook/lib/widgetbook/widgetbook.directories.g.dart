@@ -33,6 +33,13 @@ final directories = <_widgetbook.WidgetbookNode>[
         name: 'buttons',
         children: [
           _widgetbook.WidgetbookLeafComponent(
+            name: 'CherryButton',
+            useCase: _widgetbook.WidgetbookUseCase(
+              name: 'CherryButton',
+              builder: _widgetbook_catalog_widgetbook_use_cases_buttons.buttons,
+            ),
+          ),
+          _widgetbook.WidgetbookLeafComponent(
             name: 'CherryCircleButton',
             useCase: _widgetbook.WidgetbookUseCase(
               name: 'CherryCircleButton',
