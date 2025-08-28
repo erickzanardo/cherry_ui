@@ -53,6 +53,14 @@ final directories = <_widgetbook.WidgetbookNode>[
         name: 'decorations',
         children: [
           _widgetbook.WidgetbookLeafComponent(
+            name: 'CherryCardDecoration',
+            useCase: _widgetbook.WidgetbookUseCase(
+              name: 'CherryCardDecoration',
+              builder: _widgetbook_catalog_widgetbook_use_cases_decorations
+                  .cardDecoration,
+            ),
+          ),
+          _widgetbook.WidgetbookLeafComponent(
             name: 'CherryDecoratedCircle',
             useCase: _widgetbook.WidgetbookUseCase(
               name: 'CherryDecoratedCircle',
