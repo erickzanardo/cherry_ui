@@ -27,3 +27,31 @@ Widget decorations(BuildContext context) {
     ),
   );
 }
+
+@widgetbook.UseCase(
+  name: 'CherryCardDecoration',
+  type: CherryCardDecoration,
+)
+Widget cardDecoration(BuildContext context) {
+  return Scaffold(
+    body: Center(
+      child: CherryCardDecoration(
+        width: 350,
+        height: 350,
+        backgroundColor: Colors.purple,
+        decorationColor: Colors.yellow,
+        borderRadius: 32,
+        child: Padding(
+          padding: const EdgeInsets.all(16),
+          child: Center(
+            child: Text(
+              'This is a card decoration',
+              style: Theme.of(context).textTheme.bodyLarge,
+              textAlign: TextAlign.center,
+            ),
+          ),
+        ),
+      ),
+    ),
+  );
+}

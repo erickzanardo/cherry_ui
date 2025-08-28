@@ -2,6 +2,7 @@ import 'package:cherry_ui/src/cherry_ui.dart';
 import 'package:flutter/material.dart';
 
 export 'button_theme.dart';
+export 'card_theme.dart';
 
 /// A class with all design tokens for the Cherry UI design.
 class CherryUITokens {
@@ -36,6 +37,13 @@ class CherryUITheme {
     this.circleButtonTheme = const CherryCircleButtonTheme(
       size: 45,
     ),
+    this.cardTheme = const CherryCardTheme(
+      mainCardBackgroundColor: Color(0xFF9c1e97),
+      mainCardDecorationColor: Color(0xFFf5ec4c),
+      secondaryCardBackgroundColor: Color(0xFFe8e8e8),
+      secondaryCardDecorationColor: Color(0xFFf5ec4c),
+      borderRadius: 32,
+    ),
   });
 
   /// The background color of the scaffold.
@@ -49,6 +57,9 @@ class CherryUITheme {
 
   /// Theme for circle buttons.
   final CherryCircleButtonTheme circleButtonTheme;
+
+  /// Theme for cards.
+  final CherryCardTheme cardTheme;
 
   /// Returns the material theme data.
   ThemeData get themeData {
@@ -114,6 +125,7 @@ class CherryUITheme {
         baseButtonTheme,
         buttonTheme,
         circleButtonTheme,
+        cardTheme,
       ],
     );
   }
