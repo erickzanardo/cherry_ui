@@ -13,6 +13,8 @@
 import 'package:widgetbook/widgetbook.dart' as _widgetbook;
 import 'package:widgetbook_catalog/widgetbook/use_cases/buttons.dart'
     as _widgetbook_catalog_widgetbook_use_cases_buttons;
+import 'package:widgetbook_catalog/widgetbook/use_cases/cards.dart'
+    as _widgetbook_catalog_widgetbook_use_cases_cards;
 import 'package:widgetbook_catalog/widgetbook/use_cases/decorations.dart'
     as _widgetbook_catalog_widgetbook_use_cases_decorations;
 import 'package:widgetbook_catalog/widgetbook/use_cases/texts.dart'
@@ -22,6 +24,13 @@ final directories = <_widgetbook.WidgetbookNode>[
   _widgetbook.WidgetbookFolder(
     name: 'widgets',
     children: [
+      _widgetbook.WidgetbookLeafComponent(
+        name: 'CherryCard',
+        useCase: _widgetbook.WidgetbookUseCase(
+          name: 'CherryCard',
+          builder: _widgetbook_catalog_widgetbook_use_cases_cards.buttons,
+        ),
+      ),
       _widgetbook.WidgetbookLeafComponent(
         name: 'Text',
         useCase: _widgetbook.WidgetbookUseCase(
