@@ -65,7 +65,7 @@ class CherryBaseButtonTheme extends ThemeExtension<CherryBaseButtonTheme> {
   }
 
   @override
-  ThemeExtension<CherryBaseButtonTheme> copyWith({
+  CherryBaseButtonTheme copyWith({
     Color? affirmativeColor,
     Color? negativeColor,
     Color? informativeColor,
@@ -151,7 +151,7 @@ class CherryButtonTheme extends ThemeExtension<CherryButtonTheme> {
   final double blurRadius;
 
   @override
-  ThemeExtension<CherryButtonTheme> copyWith({
+  CherryButtonTheme copyWith({
     double? padding,
     double? borderRadius,
     double? borderSize,
@@ -211,7 +211,7 @@ class CherryCircleButtonTheme extends ThemeExtension<CherryCircleButtonTheme> {
   final double size;
 
   @override
-  ThemeExtension<CherryCircleButtonTheme> copyWith({
+  CherryCircleButtonTheme copyWith({
     double? size,
     double? pressedScale,
     Duration? animationDuration,
