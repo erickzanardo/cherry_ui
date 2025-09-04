@@ -44,6 +44,11 @@ class CherryUITheme {
       secondaryCardDecorationColor: Color(0xFFf5ec4c),
       borderRadius: 32,
     ),
+    this.displayFontColor = const Color(0xffc16ae3),
+    this.headlineFontColor = const Color(0xff44284f),
+    this.titleFontColor = const Color(0xff44284f),
+    this.labelFontColor = const Color(0xff4a231d),
+    this.bodyFontColor = const Color(0xff2d2726),
   });
 
   /// The background color of the scaffold.
@@ -61,111 +66,126 @@ class CherryUITheme {
   /// Theme for cards.
   final CherryCardTheme cardTheme;
 
+  /// The default font color for display texts.
+  final Color displayFontColor;
+
+  /// The default font color for headline texts.
+  final Color headlineFontColor;
+
+  /// The default font color for title texts.
+  final Color titleFontColor;
+
+  /// The default font color for label texts.
+  final Color labelFontColor;
+
+  /// The default font color for body texts.
+  final Color bodyFontColor;
+
   /// Returns the material theme data.
   ThemeData get themeData {
     return ThemeData(
       scaffoldBackgroundColor: scaffoldBackgroundColor,
-      textTheme: const TextTheme(
+      textTheme: TextTheme(
         displayLarge: TextStyle(
-          color: Color(0xffc16ae3),
+          color: displayFontColor,
           fontFamily: CherryUITokens.fontFamily,
           fontWeight: FontWeight.w900,
           fontSize: 64,
           package: CherryUITokens.package,
         ),
         displayMedium: TextStyle(
-          color: Color(0xffc16ae3),
+          color: displayFontColor,
           fontFamily: CherryUITokens.fontFamily,
           fontWeight: FontWeight.w900,
           fontSize: 48,
           package: CherryUITokens.package,
         ),
         displaySmall: TextStyle(
-          color: Color(0xffc16ae3),
+          color: displayFontColor,
           fontFamily: CherryUITokens.fontFamily,
           fontWeight: FontWeight.w900,
           fontSize: 40,
           package: CherryUITokens.package,
         ),
         headlineLarge: TextStyle(
-          color: Color(0xff44284f),
+          color: headlineFontColor,
           fontFamily: CherryUITokens.fontFamily,
           fontWeight: FontWeight.w900,
           fontSize: 32,
           package: CherryUITokens.package,
         ),
         headlineMedium: TextStyle(
-          color: Color(0xff44284f),
+          color: headlineFontColor,
           fontFamily: CherryUITokens.fontFamily,
           fontWeight: FontWeight.w900,
           fontSize: 24,
           package: CherryUITokens.package,
         ),
         headlineSmall: TextStyle(
-          color: Color(0xff44284f),
+          color: headlineFontColor,
           fontFamily: CherryUITokens.fontFamily,
           fontWeight: FontWeight.w900,
           fontSize: 20,
           package: CherryUITokens.package,
         ),
         titleLarge: TextStyle(
-          color: Color(0xff44284f),
+          color: titleFontColor,
           fontFamily: CherryUITokens.fontFamily,
           fontWeight: FontWeight.w900,
           fontSize: 36,
           package: CherryUITokens.package,
         ),
         titleMedium: TextStyle(
-          color: Color(0xff44284f),
+          color: titleFontColor,
           fontFamily: CherryUITokens.fontFamily,
           fontWeight: FontWeight.w900,
           fontSize: 30,
           package: CherryUITokens.package,
         ),
         titleSmall: TextStyle(
-          color: Color(0xff44284f),
+          color: titleFontColor,
           fontFamily: CherryUITokens.fontFamily,
           fontWeight: FontWeight.w900,
           fontSize: 26,
           package: CherryUITokens.package,
         ),
         labelLarge: TextStyle(
-          color: Color(0xff4a231d),
+          color: labelFontColor,
           fontFamily: CherryUITokens.fontFamily,
           fontWeight: FontWeight.w900,
           fontSize: 28,
           package: CherryUITokens.package,
         ),
         labelMedium: TextStyle(
-          color: Color(0xff4a231d),
+          color: labelFontColor,
           fontFamily: CherryUITokens.fontFamily,
           fontWeight: FontWeight.w900,
           fontSize: 22,
           package: CherryUITokens.package,
         ),
         labelSmall: TextStyle(
-          color: Color(0xff4a231d),
+          color: labelFontColor,
           fontFamily: CherryUITokens.fontFamily,
           fontWeight: FontWeight.w900,
           fontSize: 16,
           package: CherryUITokens.package,
         ),
         bodyLarge: TextStyle(
-          color: Color(0xff2d2726),
+          color: bodyFontColor,
           fontFamily: CherryUITokens.fontFamily,
           fontWeight: FontWeight.normal,
           fontSize: 32,
           package: CherryUITokens.package,
         ),
         bodyMedium: TextStyle(
-          color: Color(0xff2d2726),
+          color: bodyFontColor,
           fontFamily: CherryUITokens.fontFamily,
           fontWeight: FontWeight.normal,
           fontSize: 24,
           package: CherryUITokens.package,
         ),
         bodySmall: TextStyle(
-          color: Color(0xff2d2726),
+          color: bodyFontColor,
           fontFamily: CherryUITokens.fontFamily,
           fontWeight: FontWeight.normal,
           fontSize: 20,
@@ -178,6 +198,35 @@ class CherryUITheme {
         circleButtonTheme,
         cardTheme,
       ],
+    );
+  }
+
+  /// Creates a copy of this theme but with the given fields replaced with the
+  /// new values.
+  CherryUITheme copyWith({
+    Color? scaffoldBackgroundColor,
+    CherryBaseButtonTheme? baseButtonTheme,
+    CherryButtonTheme? buttonTheme,
+    CherryCircleButtonTheme? circleButtonTheme,
+    CherryCardTheme? cardTheme,
+    Color? displayFontColor,
+    Color? headlineFontColor,
+    Color? titleFontColor,
+    Color? labelFontColor,
+    Color? bodyFontColor,
+  }) {
+    return CherryUITheme(
+      scaffoldBackgroundColor:
+          scaffoldBackgroundColor ?? this.scaffoldBackgroundColor,
+      baseButtonTheme: baseButtonTheme ?? this.baseButtonTheme,
+      buttonTheme: buttonTheme ?? this.buttonTheme,
+      circleButtonTheme: circleButtonTheme ?? this.circleButtonTheme,
+      cardTheme: cardTheme ?? this.cardTheme,
+      displayFontColor: displayFontColor ?? this.displayFontColor,
+      headlineFontColor: headlineFontColor ?? this.headlineFontColor,
+      titleFontColor: titleFontColor ?? this.titleFontColor,
+      labelFontColor: labelFontColor ?? this.labelFontColor,
+      bodyFontColor: bodyFontColor ?? this.bodyFontColor,
     );
   }
 }
