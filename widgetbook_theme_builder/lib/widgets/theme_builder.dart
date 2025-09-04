@@ -19,18 +19,36 @@ class WidgetbookThemeBuilder extends StatelessWidget {
       themeNotifier.value = themeUpdater(context, themeNotifier.value);
     });
 
-    return ValueListenableBuilder<CherryUITheme>(
-      valueListenable: themeNotifier,
-      builder: (context, theme, child) {
-        return Theme(
-          data: theme.themeData,
-          child: Builder(
-            builder: (context) {
-              return builder(context, theme);
+    return Stack(
+      children: [
+        Positioned.fill(
+          child: ValueListenableBuilder<CherryUITheme>(
+            valueListenable: themeNotifier,
+            builder: (context, theme, child) {
+              return Theme(
+                data: theme.themeData,
+                child: Builder(
+                  builder: (context) {
+                    return builder(context, theme);
+                  },
+                ),
+              );
             },
           ),
-        );
-      },
+        ),
+        Align(
+          alignment: Alignment.bottomCenter,
+          child: Padding(
+            padding: const EdgeInsets.all(16),
+            child: ElevatedButton(
+              onPressed: () {
+                //
+              },
+              child: const Text('Get theme code!'),
+            ),
+          ),
+        ),
+      ],
     );
   }
 }
