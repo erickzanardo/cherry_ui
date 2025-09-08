@@ -60,7 +60,7 @@ class CherryCardTheme extends ThemeExtension<CherryCardTheme> {
   }
 
   @override
-  ThemeExtension<CherryCardTheme> copyWith({
+  CherryCardTheme copyWith({
     Color? mainCardBackgroundColor,
     Color? mainCardDecorationColor,
     Color? secondaryCardBackgroundColor,
