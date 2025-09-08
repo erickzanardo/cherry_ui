@@ -1,6 +1,5 @@
 import 'dart:collection';
 
-import 'package:accessibility_tools/accessibility_tools.dart';
 import 'package:widgetbook/widgetbook.dart';
 
 final addons = UnmodifiableListView<WidgetbookAddon>([
