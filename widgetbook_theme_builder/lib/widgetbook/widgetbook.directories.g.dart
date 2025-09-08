@@ -17,6 +17,8 @@ import 'package:widgetbook_theme_builder/widgetbook/use_cases/cards.dart'
     as _widgetbook_theme_builder_widgetbook_use_cases_cards;
 import 'package:widgetbook_theme_builder/widgetbook/use_cases/general.dart'
     as _widgetbook_theme_builder_widgetbook_use_cases_general;
+import 'package:widgetbook_theme_builder/widgetbook/use_cases/ribbons.dart'
+    as _widgetbook_theme_builder_widgetbook_use_cases_ribbons;
 import 'package:widgetbook_theme_builder/widgetbook/use_cases/texts.dart'
     as _widgetbook_theme_builder_widgetbook_use_cases_texts;
 
@@ -41,6 +43,14 @@ final directories = <_widgetbook.WidgetbookNode>[
         useCase: _widgetbook.WidgetbookUseCase(
           name: 'CherryCard',
           builder: _widgetbook_theme_builder_widgetbook_use_cases_cards.buttons,
+        ),
+      ),
+      _widgetbook.WidgetbookLeafComponent(
+        name: 'CherryRibbon',
+        useCase: _widgetbook.WidgetbookUseCase(
+          name: 'CherryRibbon',
+          builder:
+              _widgetbook_theme_builder_widgetbook_use_cases_ribbons.buttons,
         ),
       ),
       _widgetbook.WidgetbookLeafComponent(

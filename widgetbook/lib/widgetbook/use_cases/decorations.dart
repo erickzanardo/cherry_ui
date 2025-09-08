@@ -55,3 +55,26 @@ Widget cardDecoration(BuildContext context) {
     ),
   );
 }
+
+@widgetbook.UseCase(
+  name: 'CherryRibbonDecoration',
+  type: CherryRibbonDecoration,
+)
+Widget ribbonDecoration(BuildContext context) {
+  return Scaffold(
+    body: Center(
+      child: CherryRibbonDecoration(
+        backgroundColor: Colors.purple,
+        decorationColor: Colors.yellow,
+        child: Padding(
+          padding: const EdgeInsets.all(16),
+          child: Text(
+            'This is a ribbon decoration',
+            style: Theme.of(context).textTheme.bodyLarge,
+            textAlign: TextAlign.center,
+          ),
+        ),
+      ),
+    ),
+  );
+}
