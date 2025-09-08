@@ -30,6 +30,12 @@ const CherryUITheme(
     secondaryCardDecorationColor: ${cardTheme.secondaryCardDecorationColor.toCode()},
     borderRadius: ${cardTheme.borderRadius},
   ),
+  ribbonTheme: CherryRibbonTheme(
+    mainRibbonBackgroundColor: ${ribbonTheme.mainRibbonBackgroundColor.toCode()},
+    mainRibbonDecorationColor: ${ribbonTheme.mainRibbonDecorationColor.toCode()},
+    secondaryRibbonBackgroundColor: ${ribbonTheme.secondaryRibbonBackgroundColor.toCode()},
+    secondaryRibbonDecorationColor: ${ribbonTheme.secondaryRibbonDecorationColor.toCode()},
+  ),
   displayFontColor: ${displayFontColor.toCode()},
   headlineFontColor: ${headlineFontColor.toCode()},
   titleFontColor: ${titleFontColor.toCode()},
