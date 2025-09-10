@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 export 'button_theme.dart';
 export 'card_theme.dart';
 export 'ribbon_theme.dart';
+export 'switch_theme.dart';
 
 /// A class with all design tokens for the Cherry UI design.
 class CherryUITokens {
@@ -51,6 +52,15 @@ class CherryUITheme {
       secondaryRibbonBackgroundColor: Color(0xFFe8e8e8),
       secondaryRibbonDecorationColor: Color(0xFFf5ec4c),
     ),
+    this.switchTheme = const CherrySwitchTheme(
+      size: Size(80, 40),
+      selectedColor: Color(0xFF7bb881),
+      unselectedColor: Color(0xFFacb2b5),
+      thumbSelectedColor: Color(0xFF027af7),
+      thumbUnselectedColor: Color(0xFF9aacb5),
+      animationDuration: Duration(milliseconds: 200),
+      borderSize: 4,
+    ),
     this.displayFontColor = const Color(0xffc16ae3),
     this.headlineFontColor = const Color(0xff44284f),
     this.titleFontColor = const Color(0xff44284f),
@@ -75,6 +85,9 @@ class CherryUITheme {
 
   /// Theme for ribbons.
   final CherryRibbonTheme ribbonTheme;
+
+  /// Theme for switches.
+  final CherrySwitchTheme switchTheme;
 
   /// The default font color for display texts.
   final Color displayFontColor;
@@ -208,6 +221,7 @@ class CherryUITheme {
         circleButtonTheme,
         cardTheme,
         ribbonTheme,
+        switchTheme,
       ],
     );
   }
@@ -221,6 +235,7 @@ class CherryUITheme {
     CherryCircleButtonTheme? circleButtonTheme,
     CherryCardTheme? cardTheme,
     CherryRibbonTheme? ribbonTheme,
+    CherrySwitchTheme? switchTheme,
     Color? displayFontColor,
     Color? headlineFontColor,
     Color? titleFontColor,
@@ -235,6 +250,7 @@ class CherryUITheme {
       circleButtonTheme: circleButtonTheme ?? this.circleButtonTheme,
       cardTheme: cardTheme ?? this.cardTheme,
       ribbonTheme: ribbonTheme ?? this.ribbonTheme,
+      switchTheme: switchTheme ?? this.switchTheme,
       displayFontColor: displayFontColor ?? this.displayFontColor,
       headlineFontColor: headlineFontColor ?? this.headlineFontColor,
       titleFontColor: titleFontColor ?? this.titleFontColor,
