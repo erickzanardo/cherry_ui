@@ -17,6 +17,8 @@ import 'package:widgetbook_catalog/widgetbook/use_cases/cards.dart'
     as _widgetbook_catalog_widgetbook_use_cases_cards;
 import 'package:widgetbook_catalog/widgetbook/use_cases/decorations.dart'
     as _widgetbook_catalog_widgetbook_use_cases_decorations;
+import 'package:widgetbook_catalog/widgetbook/use_cases/inputs.dart'
+    as _widgetbook_catalog_widgetbook_use_cases_inputs;
 import 'package:widgetbook_catalog/widgetbook/use_cases/ribbons.dart'
     as _widgetbook_catalog_widgetbook_use_cases_ribbons;
 import 'package:widgetbook_catalog/widgetbook/use_cases/texts.dart'
@@ -92,6 +94,18 @@ final directories = <_widgetbook.WidgetbookNode>[
               name: 'CherryRibbonDecoration',
               builder: _widgetbook_catalog_widgetbook_use_cases_decorations
                   .ribbonDecoration,
+            ),
+          ),
+        ],
+      ),
+      _widgetbook.WidgetbookFolder(
+        name: 'inputs',
+        children: [
+          _widgetbook.WidgetbookLeafComponent(
+            name: 'CherrySwitch',
+            useCase: _widgetbook.WidgetbookUseCase(
+              name: 'CherrySwitch',
+              builder: _widgetbook_catalog_widgetbook_use_cases_inputs.buttons,
             ),
           ),
         ],
