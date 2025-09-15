@@ -23,7 +23,7 @@ Widget buttons(BuildContext context) {
         elevation: context.knobs.double.input(
           label: 'Elevation',
           initialValue: theme.elevatedCardTheme.elevation,
-        )
+        ),
       ),
     ),
     builder: (context, theme) {
