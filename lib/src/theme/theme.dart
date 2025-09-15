@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 
 export 'button_theme.dart';
 export 'card_theme.dart';
+export 'elevated_card_theme.dart';
 export 'ribbon_theme.dart';
 export 'switch_theme.dart';
 
@@ -46,6 +47,11 @@ class CherryUITheme {
       secondaryCardDecorationColor: Color(0xFFf5ec4c),
       borderRadius: 32,
     ),
+    this.elevatedCardTheme = const CherryElevatedCardTheme(
+      cardBackgroundColor: Color(0xfffff2f5),
+      borderRadius: 32,
+      elevation: 4,
+    ),
     this.ribbonTheme = const CherryRibbonTheme(
       mainRibbonBackgroundColor: Color(0xFF9c1e97),
       mainRibbonDecorationColor: Color(0xFFf5ec4c),
@@ -82,6 +88,9 @@ class CherryUITheme {
 
   /// Theme for cards.
   final CherryCardTheme cardTheme;
+
+  /// Theme for elevated cards.
+  final CherryElevatedCardTheme elevatedCardTheme;
 
   /// Theme for ribbons.
   final CherryRibbonTheme ribbonTheme;
@@ -220,6 +229,7 @@ class CherryUITheme {
         buttonTheme,
         circleButtonTheme,
         cardTheme,
+        elevatedCardTheme,
         ribbonTheme,
         switchTheme,
       ],
@@ -234,6 +244,7 @@ class CherryUITheme {
     CherryButtonTheme? buttonTheme,
     CherryCircleButtonTheme? circleButtonTheme,
     CherryCardTheme? cardTheme,
+    CherryElevatedCardTheme? elevatedCardTheme,
     CherryRibbonTheme? ribbonTheme,
     CherrySwitchTheme? switchTheme,
     Color? displayFontColor,
@@ -249,6 +260,7 @@ class CherryUITheme {
       buttonTheme: buttonTheme ?? this.buttonTheme,
       circleButtonTheme: circleButtonTheme ?? this.circleButtonTheme,
       cardTheme: cardTheme ?? this.cardTheme,
+      elevatedCardTheme: elevatedCardTheme ?? this.elevatedCardTheme,
       ribbonTheme: ribbonTheme ?? this.ribbonTheme,
       switchTheme: switchTheme ?? this.switchTheme,
       displayFontColor: displayFontColor ?? this.displayFontColor,
