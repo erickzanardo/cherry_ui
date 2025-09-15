@@ -78,3 +78,31 @@ Widget ribbonDecoration(BuildContext context) {
     ),
   );
 }
+
+@widgetbook.UseCase(
+  name: 'CherryElevatedCardDecoration',
+  type: CherryElevatedCardDecoration,
+)
+Widget elevatedCardDecoration(BuildContext context) {
+  return Scaffold(
+    body: Center(
+      child: CherryElevatedCardDecoration(
+        width: 350,
+        height: 350,
+        backgroundColor: Colors.pinkAccent,
+        elevation: 4,
+        borderRadius: 32,
+        child: Padding(
+          padding: const EdgeInsets.all(16),
+          child: Center(
+            child: Text(
+              'This is an elebated card decoration',
+              style: Theme.of(context).textTheme.bodyLarge,
+              textAlign: TextAlign.center,
+            ),
+          ),
+        ),
+      ),
+    ),
+  );
+}

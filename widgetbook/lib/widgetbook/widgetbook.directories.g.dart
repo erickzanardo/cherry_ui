@@ -32,7 +32,15 @@ final directories = <_widgetbook.WidgetbookNode>[
         name: 'CherryCard',
         useCase: _widgetbook.WidgetbookUseCase(
           name: 'CherryCard',
-          builder: _widgetbook_catalog_widgetbook_use_cases_cards.buttons,
+          builder: _widgetbook_catalog_widgetbook_use_cases_cards.cherryCard,
+        ),
+      ),
+      _widgetbook.WidgetbookLeafComponent(
+        name: 'CherryElevatedCard',
+        useCase: _widgetbook.WidgetbookUseCase(
+          name: 'CherryElevatedCard',
+          builder:
+              _widgetbook_catalog_widgetbook_use_cases_cards.cherryElevatedCard,
         ),
       ),
       _widgetbook.WidgetbookLeafComponent(
@@ -86,6 +94,14 @@ final directories = <_widgetbook.WidgetbookNode>[
               name: 'CherryDecoratedCircle',
               builder: _widgetbook_catalog_widgetbook_use_cases_decorations
                   .decorations,
+            ),
+          ),
+          _widgetbook.WidgetbookLeafComponent(
+            name: 'CherryElevatedCardDecoration',
+            useCase: _widgetbook.WidgetbookUseCase(
+              name: 'CherryElevatedCardDecoration',
+              builder: _widgetbook_catalog_widgetbook_use_cases_decorations
+                  .elevatedCardDecoration,
             ),
           ),
           _widgetbook.WidgetbookLeafComponent(

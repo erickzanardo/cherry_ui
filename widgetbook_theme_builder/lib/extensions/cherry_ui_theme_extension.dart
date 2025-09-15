@@ -30,6 +30,11 @@ const CherryUITheme(
     secondaryCardDecorationColor: ${cardTheme.secondaryCardDecorationColor.toCode()},
     borderRadius: ${cardTheme.borderRadius},
   ),
+  elevatedCardTheme: CherryElevatedCardTheme(
+    cardBackgroundColor: ${elevatedCardTheme.cardBackgroundColor.toCode()},
+    borderRadius: ${elevatedCardTheme.borderRadius},
+    elevation: ${elevatedCardTheme.elevation},
+  ),
   ribbonTheme: CherryRibbonTheme(
     mainRibbonBackgroundColor: ${ribbonTheme.mainRibbonBackgroundColor.toCode()},
     mainRibbonDecorationColor: ${ribbonTheme.mainRibbonDecorationColor.toCode()},

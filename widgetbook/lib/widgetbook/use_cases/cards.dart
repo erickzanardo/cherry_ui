@@ -6,7 +6,7 @@ import 'package:widgetbook_annotation/widgetbook_annotation.dart' as widgetbook;
   name: 'CherryCard',
   type: CherryCard,
 )
-Widget buttons(BuildContext context) {
+Widget cherryCard(BuildContext context) {
   return Scaffold(
     body: Center(
       child: Column(
@@ -20,6 +20,28 @@ Widget buttons(BuildContext context) {
               type: type,
               child: Center(child: Text(type.name.toUpperCase())),
             ),
+        ],
+      ),
+    ),
+  );
+}
+
+@widgetbook.UseCase(
+  name: 'CherryElevatedCard',
+  type: CherryElevatedCard,
+)
+Widget cherryElevatedCard(BuildContext context) {
+  return const Scaffold(
+    body: Center(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        spacing: 32,
+        children: [
+          CherryElevatedCard(
+            width: 250,
+            height: 150,
+            child: Center(child: Text('An Elevated Card')),
+          ),
         ],
       ),
     ),
