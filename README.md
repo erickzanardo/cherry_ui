@@ -35,6 +35,17 @@ Install via `flutter pub add`:
 dart pub add cherry_ui
 ```
 
+## Themming
+
+Cherry UI is highly customizable, colors, paddings, border radius among other properties can be changed by 
+providing a custom values when instantiating a `CherryUITheme`.
+
+### Theme editor
+
+If you want a "visual" way of creating your custom theme, you can use this [theme builder](https://cherry-ui.pages.dev/).
+
+In it you can customize all of the theme properties affecting all widgets, and export the code to use in your application!
+
 ---
 
 ## Running Tests 🧪

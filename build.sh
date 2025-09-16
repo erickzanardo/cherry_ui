@@ -1,8 +1,6 @@
 #!/bin/bash
 
-if [ ! -z "$1" ]; then
-  cd $1
-fi
+cd $1
 
 if cd flutter;
 then
