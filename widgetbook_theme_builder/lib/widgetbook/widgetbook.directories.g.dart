@@ -30,79 +30,98 @@ final directories = <_widgetbook.WidgetbookNode>[
   _widgetbook.WidgetbookFolder(
     name: 'material',
     children: [
-      _widgetbook.WidgetbookLeafComponent(
+      _widgetbook.WidgetbookComponent(
         name: 'Scaffold',
-        useCase: _widgetbook.WidgetbookUseCase(
-          name: 'general',
-          builder: _widgetbook_theme_builder_widgetbook_use_cases_general.texts,
-        ),
+        useCases: [
+          _widgetbook.WidgetbookUseCase(
+            name: 'general',
+            builder:
+                _widgetbook_theme_builder_widgetbook_use_cases_general.texts,
+          ),
+        ],
       ),
     ],
   ),
   _widgetbook.WidgetbookFolder(
     name: 'widgets',
     children: [
-      _widgetbook.WidgetbookLeafComponent(
+      _widgetbook.WidgetbookComponent(
         name: 'CherryCard',
-        useCase: _widgetbook.WidgetbookUseCase(
-          name: 'CherryCard',
-          builder: _widgetbook_theme_builder_widgetbook_use_cases_cards.buttons,
-        ),
+        useCases: [
+          _widgetbook.WidgetbookUseCase(
+            name: 'CherryCard',
+            builder:
+                _widgetbook_theme_builder_widgetbook_use_cases_cards.buttons,
+          ),
+        ],
       ),
-      _widgetbook.WidgetbookLeafComponent(
+      _widgetbook.WidgetbookComponent(
         name: 'CherryElevatedCard',
-        useCase: _widgetbook.WidgetbookUseCase(
-          name: 'CherryElevatedCard',
-          builder: _widgetbook_theme_builder_widgetbook_use_cases_elevated_cards
-              .buttons,
-        ),
+        useCases: [
+          _widgetbook.WidgetbookUseCase(
+            name: 'CherryElevatedCard',
+            builder:
+                _widgetbook_theme_builder_widgetbook_use_cases_elevated_cards
+                    .buttons,
+          ),
+        ],
       ),
-      _widgetbook.WidgetbookLeafComponent(
+      _widgetbook.WidgetbookComponent(
         name: 'CherryRibbon',
-        useCase: _widgetbook.WidgetbookUseCase(
-          name: 'CherryRibbon',
-          builder:
-              _widgetbook_theme_builder_widgetbook_use_cases_ribbons.buttons,
-        ),
+        useCases: [
+          _widgetbook.WidgetbookUseCase(
+            name: 'CherryRibbon',
+            builder:
+                _widgetbook_theme_builder_widgetbook_use_cases_ribbons.buttons,
+          ),
+        ],
       ),
-      _widgetbook.WidgetbookLeafComponent(
+      _widgetbook.WidgetbookComponent(
         name: 'Text',
-        useCase: _widgetbook.WidgetbookUseCase(
-          name: 'Text',
-          builder: _widgetbook_theme_builder_widgetbook_use_cases_texts.texts,
-        ),
+        useCases: [
+          _widgetbook.WidgetbookUseCase(
+            name: 'Text',
+            builder: _widgetbook_theme_builder_widgetbook_use_cases_texts.texts,
+          ),
+        ],
       ),
       _widgetbook.WidgetbookFolder(
         name: 'buttons',
         children: [
-          _widgetbook.WidgetbookLeafComponent(
+          _widgetbook.WidgetbookComponent(
             name: 'CherryButton',
-            useCase: _widgetbook.WidgetbookUseCase(
-              name: 'CherryButton',
-              builder: _widgetbook_theme_builder_widgetbook_use_cases_buttons
-                  .buttons,
-            ),
+            useCases: [
+              _widgetbook.WidgetbookUseCase(
+                name: 'CherryButton',
+                builder: _widgetbook_theme_builder_widgetbook_use_cases_buttons
+                    .buttons,
+              ),
+            ],
           ),
-          _widgetbook.WidgetbookLeafComponent(
+          _widgetbook.WidgetbookComponent(
             name: 'CherryCircleButton',
-            useCase: _widgetbook.WidgetbookUseCase(
-              name: 'CherryCircleButton',
-              builder: _widgetbook_theme_builder_widgetbook_use_cases_buttons
-                  .circleButtons,
-            ),
+            useCases: [
+              _widgetbook.WidgetbookUseCase(
+                name: 'CherryCircleButton',
+                builder: _widgetbook_theme_builder_widgetbook_use_cases_buttons
+                    .circleButtons,
+              ),
+            ],
           ),
         ],
       ),
       _widgetbook.WidgetbookFolder(
         name: 'inputs',
         children: [
-          _widgetbook.WidgetbookLeafComponent(
+          _widgetbook.WidgetbookComponent(
             name: 'CherrySwitch',
-            useCase: _widgetbook.WidgetbookUseCase(
-              name: 'CherrySwitch',
-              builder: _widgetbook_theme_builder_widgetbook_use_cases_inputs
-                  .switches,
-            ),
+            useCases: [
+              _widgetbook.WidgetbookUseCase(
+                name: 'CherrySwitch',
+                builder: _widgetbook_theme_builder_widgetbook_use_cases_inputs
+                    .switches,
+              ),
+            ],
           ),
         ],
       ),

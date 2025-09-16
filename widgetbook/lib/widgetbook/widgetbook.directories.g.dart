@@ -28,101 +28,125 @@ final directories = <_widgetbook.WidgetbookNode>[
   _widgetbook.WidgetbookFolder(
     name: 'widgets',
     children: [
-      _widgetbook.WidgetbookLeafComponent(
+      _widgetbook.WidgetbookComponent(
         name: 'CherryCard',
-        useCase: _widgetbook.WidgetbookUseCase(
-          name: 'CherryCard',
-          builder: _widgetbook_catalog_widgetbook_use_cases_cards.cherryCard,
-        ),
+        useCases: [
+          _widgetbook.WidgetbookUseCase(
+            name: 'CherryCard',
+            builder: _widgetbook_catalog_widgetbook_use_cases_cards.cherryCard,
+          ),
+        ],
       ),
-      _widgetbook.WidgetbookLeafComponent(
+      _widgetbook.WidgetbookComponent(
         name: 'CherryElevatedCard',
-        useCase: _widgetbook.WidgetbookUseCase(
-          name: 'CherryElevatedCard',
-          builder:
-              _widgetbook_catalog_widgetbook_use_cases_cards.cherryElevatedCard,
-        ),
+        useCases: [
+          _widgetbook.WidgetbookUseCase(
+            name: 'CherryElevatedCard',
+            builder: _widgetbook_catalog_widgetbook_use_cases_cards
+                .cherryElevatedCard,
+          ),
+        ],
       ),
-      _widgetbook.WidgetbookLeafComponent(
+      _widgetbook.WidgetbookComponent(
         name: 'CherryRibbon',
-        useCase: _widgetbook.WidgetbookUseCase(
-          name: 'CherryRibbon',
-          builder: _widgetbook_catalog_widgetbook_use_cases_ribbons.buttons,
-        ),
+        useCases: [
+          _widgetbook.WidgetbookUseCase(
+            name: 'CherryRibbon',
+            builder: _widgetbook_catalog_widgetbook_use_cases_ribbons.buttons,
+          ),
+        ],
       ),
-      _widgetbook.WidgetbookLeafComponent(
+      _widgetbook.WidgetbookComponent(
         name: 'Text',
-        useCase: _widgetbook.WidgetbookUseCase(
-          name: 'Text',
-          builder: _widgetbook_catalog_widgetbook_use_cases_texts.texts,
-        ),
+        useCases: [
+          _widgetbook.WidgetbookUseCase(
+            name: 'Text',
+            builder: _widgetbook_catalog_widgetbook_use_cases_texts.texts,
+          ),
+        ],
       ),
       _widgetbook.WidgetbookFolder(
         name: 'buttons',
         children: [
-          _widgetbook.WidgetbookLeafComponent(
+          _widgetbook.WidgetbookComponent(
             name: 'CherryButton',
-            useCase: _widgetbook.WidgetbookUseCase(
-              name: 'CherryButton',
-              builder: _widgetbook_catalog_widgetbook_use_cases_buttons.buttons,
-            ),
+            useCases: [
+              _widgetbook.WidgetbookUseCase(
+                name: 'CherryButton',
+                builder:
+                    _widgetbook_catalog_widgetbook_use_cases_buttons.buttons,
+              ),
+            ],
           ),
-          _widgetbook.WidgetbookLeafComponent(
+          _widgetbook.WidgetbookComponent(
             name: 'CherryCircleButton',
-            useCase: _widgetbook.WidgetbookUseCase(
-              name: 'CherryCircleButton',
-              builder: _widgetbook_catalog_widgetbook_use_cases_buttons
-                  .circleButtons,
-            ),
+            useCases: [
+              _widgetbook.WidgetbookUseCase(
+                name: 'CherryCircleButton',
+                builder: _widgetbook_catalog_widgetbook_use_cases_buttons
+                    .circleButtons,
+              ),
+            ],
           ),
         ],
       ),
       _widgetbook.WidgetbookFolder(
         name: 'decorations',
         children: [
-          _widgetbook.WidgetbookLeafComponent(
+          _widgetbook.WidgetbookComponent(
             name: 'CherryCardDecoration',
-            useCase: _widgetbook.WidgetbookUseCase(
-              name: 'CherryCardDecoration',
-              builder: _widgetbook_catalog_widgetbook_use_cases_decorations
-                  .cardDecoration,
-            ),
+            useCases: [
+              _widgetbook.WidgetbookUseCase(
+                name: 'CherryCardDecoration',
+                builder: _widgetbook_catalog_widgetbook_use_cases_decorations
+                    .cardDecoration,
+              ),
+            ],
           ),
-          _widgetbook.WidgetbookLeafComponent(
+          _widgetbook.WidgetbookComponent(
             name: 'CherryDecoratedCircle',
-            useCase: _widgetbook.WidgetbookUseCase(
-              name: 'CherryDecoratedCircle',
-              builder: _widgetbook_catalog_widgetbook_use_cases_decorations
-                  .decorations,
-            ),
+            useCases: [
+              _widgetbook.WidgetbookUseCase(
+                name: 'CherryDecoratedCircle',
+                builder: _widgetbook_catalog_widgetbook_use_cases_decorations
+                    .decorations,
+              ),
+            ],
           ),
-          _widgetbook.WidgetbookLeafComponent(
+          _widgetbook.WidgetbookComponent(
             name: 'CherryElevatedCardDecoration',
-            useCase: _widgetbook.WidgetbookUseCase(
-              name: 'CherryElevatedCardDecoration',
-              builder: _widgetbook_catalog_widgetbook_use_cases_decorations
-                  .elevatedCardDecoration,
-            ),
+            useCases: [
+              _widgetbook.WidgetbookUseCase(
+                name: 'CherryElevatedCardDecoration',
+                builder: _widgetbook_catalog_widgetbook_use_cases_decorations
+                    .elevatedCardDecoration,
+              ),
+            ],
           ),
-          _widgetbook.WidgetbookLeafComponent(
+          _widgetbook.WidgetbookComponent(
             name: 'CherryRibbonDecoration',
-            useCase: _widgetbook.WidgetbookUseCase(
-              name: 'CherryRibbonDecoration',
-              builder: _widgetbook_catalog_widgetbook_use_cases_decorations
-                  .ribbonDecoration,
-            ),
+            useCases: [
+              _widgetbook.WidgetbookUseCase(
+                name: 'CherryRibbonDecoration',
+                builder: _widgetbook_catalog_widgetbook_use_cases_decorations
+                    .ribbonDecoration,
+              ),
+            ],
           ),
         ],
       ),
       _widgetbook.WidgetbookFolder(
         name: 'inputs',
         children: [
-          _widgetbook.WidgetbookLeafComponent(
+          _widgetbook.WidgetbookComponent(
             name: 'CherrySwitch',
-            useCase: _widgetbook.WidgetbookUseCase(
-              name: 'CherrySwitch',
-              builder: _widgetbook_catalog_widgetbook_use_cases_inputs.buttons,
-            ),
+            useCases: [
+              _widgetbook.WidgetbookUseCase(
+                name: 'CherrySwitch',
+                builder:
+                    _widgetbook_catalog_widgetbook_use_cases_inputs.buttons,
+              ),
+            ],
           ),
         ],
       ),
